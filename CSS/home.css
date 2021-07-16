@@ -1,0 +1,504 @@
+/* 
+Autor: Adriana Barros
+Data: 16/07/2021
+Versão: 1.0
+Comentário: Website criado para a UFCD Edição Web.
+*/
+
+/* Global Style */
+ 
+:root {
+    font-size: 16px;
+    --titulos: 'Tomorrow', Arial, Helvetica, sans-serif; 
+    --subtitulos: 'Tomorrow', Arial, Helvetica, sans-serif;
+    --texto: 'Titillium Web', Arial, Helvetica, sans-serif;
+
+    /* Cores (Tá desorganizado, mas estamos a trabalhar nisto... haha) */
+
+    --bg-primary: #F2F2F2;
+    --title-primary: #616161;
+    --sub-primary: #9A9AAB;
+    --accent: #060624;
+    --texts: #BFBFFF;
+    --details: #9714CD;
+    --nav: #E1D8E3;
+    --Detail-02: #FFC5F8;
+    --BW-01: #A693AE;
+    --texto-dois: #DDC6E0;
+    --border: #120A43;
+}
+
+    /* Body style */
+    
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: var(--bg-primary);
+}
+
+    /* Nav style */
+
+header {
+    background-color: #0A0A24;
+    position: fixed;
+    top: 0;
+    margin: 0 auto;
+    padding: 0 10%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px 5px rgba(18,10,67, 0.1);
+    z-index: 9999;
+}
+
+header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+header a h1 {
+    font-size: 1.5rem;
+    font-family: var(--titulos);
+    color: var(--bg-primary);
+}
+
+nav {
+    display: flex;
+}
+
+ul {
+    display: flex;
+}
+
+nav ul li {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li a:link {
+    text-align: center;
+    font-family: var(--texto);
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--nav);
+    padding: 10px 15px;
+}
+
+nav ul li a:visited {
+    color: var(--nav);
+
+}
+
+nav ul li a:hover {
+    color: var(--texts);
+    border-bottom: 2px solid var(--texts);
+}
+
+nav a {
+    align-self: center;
+}
+
+.github, .linkedin {
+    padding: 0 0.2rem;
+    font-size: 1.5rem;
+    color: var(--details);
+}
+
+.github:hover, .linkedin:hover {
+    color: var(--texts);
+}
+    /* Main style */
+
+main {
+    width: 100%;
+}
+
+.main-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.container-one, .container-two {
+    flex: 1 1 0;
+}
+
+.container-two {
+    display: flex;
+}
+
+
+.fa-square {
+    font-size: 0.6rem;
+    color: var(--details);
+    padding-right: 0.5rem;
+}
+
+#hero {
+    height: 80vh;
+    background-color: var(--accent);
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+#hero span {
+    font-family: var(--texto);
+    font-size: 0.8rem;
+    color: var(--Detail-02);
+}
+
+#hero img {
+    max-width: 37%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 10px solid var(--border)
+
+}
+
+#hero h2, #hero h2 span {
+    font-family: var(--texto);
+    font-size: 3rem;
+    color: var(--nav);
+}
+
+#hero h2 {
+    line-height: 1.2;
+}
+
+#hero h2 span {
+    color: var(--details);
+    font-size: 3.5rem;
+}
+
+#hero .container-one p {
+    font-family: var(--texto);
+    font-size: 1rem;
+    margin-top: -6%;
+    margin-bottom: 10%;
+    color: var(--BW-01)
+}
+
+
+.heading {
+    font-size: 2rem;
+    font-family: var(--titulos);
+    color: var(--accent);
+}
+
+.bar, .bar-contato {
+    border-width: 5px;
+    border-style:  solid;
+    border-color: var(--details);
+    width:50px;
+    text-align:left;
+    margin-left:0;
+    margin-bottom: 5%;
+}
+
+.sub-heading {
+    font-family: var(--texto);
+    font-size: 1.5rem;
+    color: var(--title-primary);
+    text-transform: uppercase;
+}
+
+#biografia {
+    position: relative;
+    background-image: url(../Imagens/divisor-escuro.png);
+    background-size: 50%;
+    background-repeat: repeat-x;
+    background-position-y: -20%;
+    background-color: var(--nav);
+}
+
+#biografia .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#biografia .container-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#biografia .container-two {
+    align-items: center;
+}
+
+#biografia .container-two p {
+    flex: 1 1 0;
+    padding-right: 2%;
+    font-family: var(--texto);
+    font-size: 1rem;
+    color: var(--title-primary);
+}
+
+#formacao, #formacao .main-container,
+#habilidades {
+    padding: 10% 0;
+}
+
+#formacao .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#formacao .container-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-self: stretch;
+    padding-bottom: 5%;
+}
+
+#formacao .main-container .container-two,
+#habilidades .main-container .container-two {
+    display: flex;
+    align-self: stretch;
+}
+
+#formacao .main-container .container-two #licenciatura,
+#formacao .main-container .container-two #cursos,
+#habilidades .main-container .container-two #tec-ferramentas,
+#habilidades .main-container .container-two #idiomas,
+#habilidades .main-container .container-two #conceitos {
+    flex: 1 1 0;
+}
+
+#formacao #cursos {
+    position: relative;
+    left: 11%;
+}
+
+#tec-ferramentas span,
+#idiomas span,
+#conceitos span {
+    display: block;
+}
+
+#habilidades .container-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+}
+
+
+#habilidades .main-container .container-two #idiomas,
+#habilidades .main-container .container-two #conceitos {
+    padding-left: 1.5rem;
+}
+
+#formacao span, 
+#formacao .data-curso, 
+#tec-ferramentas span,
+#idiomas span,
+#conceitos span {
+    font-family: var(--texto);
+    font-weight: 200;
+    font-size: 1rem;
+    color: var(--sub-primary);
+    margin: 0;
+}
+
+#tec-ferramentas span,
+#idiomas span,
+#conceitos span {
+    padding: 0.5rem 0;
+}
+
+#idiomas, #conceitos {
+position: relative;
+left: 10%;
+}
+
+.data-curso {
+    padding-bottom: 1.5rem;
+}
+
+.tipo-curso {
+    font-family: var(--texto);
+    font-size: 1.5rem;
+    color: var(--title-primary);
+    margin: 0;
+}
+
+#habilidades {
+    background-color: var(--nav);
+}
+
+#habilidades .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+
+#contato {
+    height: 40vh;
+    background-color: #670DAB;
+}
+
+#contato .container-two, #contato .container-one {
+align-self: flex-end;
+padding-bottom: 2%;
+}
+
+#contato .container-two {   
+    display: inherit;
+    justify-content: flex-end;
+}
+
+#contato .container-one a {
+    font-family: var(--texto);
+    font-size: 1rem;
+    color: var(--nav);
+    text-decoration: none;
+}
+
+#contato .container-one a:hover {
+    color: var(--accent);
+}
+
+#contato .bar-contato {
+    border-color: var(--nav);
+}
+
+#contato .github, #contato .linkedin {
+    padding: 0.5rem 0.5rem;
+    color: var(--nav);
+}
+
+#contato .github:hover, #contato .linkedin:hover {
+    padding: 0.5rem 0.5rem;
+    color: var(--accent);
+    background-color: var(--texts);
+}
+
+#contato .container-two div {
+    align-self: center;
+}
+
+
+    /* Seção Biografia */
+
+
+    /* Footer style */
+
+footer {
+    background-color: var(--accent);
+    margin: 0 auto;
+    text-align: center;
+    padding: 2vh 0;
+}
+
+footer h4, footer i {
+    color: var(--details);
+    display: inline;
+    font-family: var(--titulos);
+    font-size: 0.8rem;
+    font-weight: 200;
+}
+
+footer i:hover {
+    color: var(--bg-primary);
+}
+
+/* Buttons  Style Begin */
+
+#btn-home {
+    margin-top: 6%;
+    padding: 1rem 4rem;
+    background-image: radial-gradient( circle 485px at 51.5% -6.3%,  rgba(77,185,229,1) 0%, rgba(109,46,213,1) 95.7% );
+    cursor: pointer;
+    border: none;
+    font-family: var(--texto);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--nav);
+    box-shadow: 0 0 20px 5px rgba(77, 185, 229, 0.7);
+}
+
+#btn-home:hover {
+    background-image: radial-gradient( circle 485px at 51.5% -6.3%,  rgba(109,46,213,1) 0%, rgba(77,185,229,1) 95.7% );
+    box-shadow: 0 0 30px 5px rgba(77, 185, 229, 1);
+}
+
+/* Buttons  Style End */
+
+    /* Animações Start */
+
+    @keyframes flutuar {
+        0% {
+            transform: translatey(0px);
+        }
+        50% {
+            transform: translatey(-20px);
+        }
+        100% {
+            transform: translatey(0px);
+        } 
+    }
+    
+    .animacao {
+        animation-name: flutuar;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+    
+    .grow {
+        transition: transform 330ms ease-in-out;
+    }
+    
+    .grow:hover {
+        transform: scale(1.1);
+    }
+
+    
+    @keyframes rotate {
+        0% {
+          transform: rotate(45deg);
+        }
+        30% {
+          transform: rotate(90deg);
+        }
+        60% {
+        transform: rotate(180deg);
+        }
+        80% {
+        transform: rotate(225deg);
+        }
+        100% {
+        transform: rotate(180deg);
+        }
+    }
+    
+    
+    .animacao-rotate {
+      align-self: flex-start;
+      display;
+      width: 10px;
+      height: 10px;
+      background-color: var(--accent);
+      animation-name: rotate;
+      animation-duration: 3s;
+      animation-iteration-count: 3;
+      z-index: 8888;
+    }
