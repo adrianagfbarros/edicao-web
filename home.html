@@ -18,6 +18,8 @@
     <!----- Styles ------->
     <link rel="stylesheet" href="CSS/home.css">
 
+    
+
     <title>Adriana Barros - Home</title>
 
 </head>
@@ -25,13 +27,17 @@
 <body>
     <header>
         <a class="grow" href="index.html"><h1>Adriana Barros</h1></a>
-        <nav>
-            <ul>
-                <li><a href="#biografia">Biografia</a></li>
-                <li><a href="#formacao">Formação</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#contato">Contato</a></li>
+        
+        <nav id="nav">
+            <button class="resp-menu" id="resp-menu"><i class="fa fa-bars grow"></i></button>
+            
+            <ul class="nav-ul" id="nav-ul">
+                <li class="menu-item"><a href="#biografia">Biografia</a></li>
+                <li class="menu-item"><a href="#formacao">Formação</a></li>
+                <li class="menu-item"><a href="#habilidades">Habilidades</a></li>
+                <li class="menu-item"><a href="#contato">Contato</a></li>
             </ul>
+
             <a href="https://github.com/adrianagfbarros/projeto-edicao-web" target="_blank"><i class=" grow github fa fa-github"></i></a></li>
             <a href="https://linkedin.com/in/adrianagfbarros" target="_blank"><i class=" grow linkedin fa fa-linkedin"></i></a>         
         </nav>
@@ -47,7 +53,7 @@
                     <a href="#contato"><button  id="btn-home" class="grow" onclick="Myform" type="submit">Ver Contato</button></a>
                 </div>
                 <div class="container-two">
-                    <img class="animacao" src="Imagens/Adriana-B-PS.jpg" alt="Adriana">
+                    <img src="Imagens/Adriana-B-PS.jpg" alt="Adriana">
 
                 </div>
             </div>
@@ -187,6 +193,9 @@
     <footer>
         <h4>© 2021 - Feito com <i class="fa fa-heart grow"></i> por Adriana Barros.</h4>
     </footer>
+
+    <!----- JS ------->
+    <script src="JS/script.js"></script>
 
 </body>
 

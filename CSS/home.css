@@ -1,17 +1,17 @@
 /* 
 Autor: Adriana Barros
 Data: 16/07/2021
-Versão: 1.0
+Versão: 1.2
 Comentário: Website criado para a UFCD Edição Web.
 */
 
 /* Global Style */
  
 :root {
-    font-size: 16px;
     --titulos: 'Tomorrow', Arial, Helvetica, sans-serif; 
     --subtitulos: 'Tomorrow', Arial, Helvetica, sans-serif;
     --texto: 'Titillium Web', Arial, Helvetica, sans-serif;
+    font-size: 12px;
 
     /* Cores (Tá desorganizado, mas estamos a trabalhar nisto... haha) */
 
@@ -32,8 +32,11 @@ Comentário: Website criado para a UFCD Edição Web.
     
 body {
     max-width: 1440px;
+    width: 100%;
     margin: 0 auto;
     background-color: var(--bg-primary);
+    box-sizing: border-box;
+    
 }
 
     /* Nav style */
@@ -42,13 +45,13 @@ header {
     background-color: #0A0A24;
     position: fixed;
     top: 0;
-    margin: 0 auto;
-    padding: 0 10%;
-    width: 80%;
+    padding: 0 10vw;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     box-shadow: 0 2px 10px 5px rgba(18,10,67, 0.1);
     z-index: 9999;
+    box-sizing: border-box;
 }
 
 header a {
@@ -58,13 +61,15 @@ header a {
 }
 
 header a h1 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-family: var(--titulos);
     color: var(--bg-primary);
 }
 
 nav {
     display: flex;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 ul {
@@ -79,7 +84,7 @@ nav ul li {
 nav ul li a:link {
     text-align: center;
     font-family: var(--texto);
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-decoration: none;
     color: var(--nav);
     padding: 10px 15px;
@@ -99,18 +104,29 @@ nav a {
     align-self: center;
 }
 
+nav button {
+    display: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--bg-primary);
+    font-size: 2rem;
+    box-sizing: border-box;
+}
+
 .github, .linkedin {
     padding: 0 0.2rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--details);
 }
 
-.github:hover, .linkedin:hover {
+.github:hover, .linkedin:hover, nav button:hover {
     color: var(--texts);
 }
     /* Main style */
 
 main {
+    box-sizing: border-box;
     width: 100%;
 }
 
@@ -121,6 +137,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
 section {
@@ -129,10 +146,12 @@ section {
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 .container-one, .container-two {
     flex: 1 1 0;
+    box-sizing: border-box;
 }
 
 .container-two {
@@ -141,36 +160,38 @@ section {
 
 
 .fa-square {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     color: var(--details);
     padding-right: 0.5rem;
 }
 
 #hero {
-    height: 80vh;
+    position: relative;
+    height: fit-content;
     background-color: var(--accent);
-    padding-top: 10%;
+    padding-top: 15%;
     padding-bottom: 10%;
+    display: flex;
 }
 
 #hero span {
+    font-size: 1.2rem;
     font-family: var(--texto);
-    font-size: 0.8rem;
     color: var(--Detail-02);
 }
 
 #hero img {
-    max-width: 37%;
-    position: absolute;
+    position: relative;
+    max-width: 60%;
+    min-width: 200px;
+    z-index: 99;
     top: 0;
-    right: 0;
-    border: 10px solid var(--border)
-
+    right: -22%;
 }
 
 #hero h2, #hero h2 span {
+    font-size: 3.5rem;
     font-family: var(--texto);
-    font-size: 3rem;
     color: var(--nav);
 }
 
@@ -180,12 +201,11 @@ section {
 
 #hero h2 span {
     color: var(--details);
-    font-size: 3.5rem;
 }
 
 #hero .container-one p {
     font-family: var(--texto);
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin-top: -6%;
     margin-bottom: 10%;
     color: var(--BW-01)
@@ -193,7 +213,7 @@ section {
 
 
 .heading {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-family: var(--titulos);
     color: var(--accent);
 }
@@ -241,16 +261,18 @@ section {
 }
 
 #biografia .container-two p {
+    box-sizing: border-box;
     flex: 1 1 0;
     padding-right: 2%;
     font-family: var(--texto);
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: var(--title-primary);
 }
 
 #formacao, #formacao .main-container,
 #habilidades {
-    padding: 10% 0;
+    height: fit-content;
+    padding: 10vh 0;
 }
 
 #formacao .main-container {
@@ -267,17 +289,22 @@ section {
     padding-bottom: 5%;
 }
 
-#formacao .main-container .container-two,
+
 #habilidades .main-container .container-two {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    box-sizing: border-box;
+}
+
+#formacao .main-container .container-two {
     display: flex;
     align-self: stretch;
 }
+    
 
 #formacao .main-container .container-two #licenciatura,
-#formacao .main-container .container-two #cursos,
-#habilidades .main-container .container-two #tec-ferramentas,
-#habilidades .main-container .container-two #idiomas,
-#habilidades .main-container .container-two #conceitos {
+#formacao .main-container .container-two #cursos {
     flex: 1 1 0;
 }
 
@@ -299,12 +326,6 @@ section {
     align-self: stretch;
 }
 
-
-#habilidades .main-container .container-two #idiomas,
-#habilidades .main-container .container-two #conceitos {
-    padding-left: 1.5rem;
-}
-
 #formacao span, 
 #formacao .data-curso, 
 #tec-ferramentas span,
@@ -312,31 +333,20 @@ section {
 #conceitos span {
     font-family: var(--texto);
     font-weight: 200;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--sub-primary);
-    margin: 0;
-}
-
-#tec-ferramentas span,
-#idiomas span,
-#conceitos span {
-    padding: 0.5rem 0;
-}
-
-#idiomas, #conceitos {
-position: relative;
-left: 10%;
+    margin: 0.5rem 0;
 }
 
 .data-curso {
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
 }
 
 .tipo-curso {
     font-family: var(--texto);
     font-size: 1.5rem;
     color: var(--title-primary);
-    margin: 0;
+    margin: 0.5rem 0;
 }
 
 #habilidades {
@@ -349,11 +359,10 @@ left: 10%;
     align-items: flex-start;
 }
 
-
-
 #contato {
     height: 40vh;
     background-color: #670DAB;
+    box-sizing: border-box;
 }
 
 #contato .container-two, #contato .container-one {
@@ -368,7 +377,7 @@ padding-bottom: 2%;
 
 #contato .container-one a {
     font-family: var(--texto);
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--nav);
     text-decoration: none;
 }
@@ -413,7 +422,7 @@ footer h4, footer i {
     color: var(--details);
     display: inline;
     font-family: var(--titulos);
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 200;
 }
 
@@ -490,10 +499,9 @@ footer i:hover {
         }
     }
     
-    
     .animacao-rotate {
       align-self: flex-start;
-      display;
+      display: inline;
       width: 10px;
       height: 10px;
       background-color: var(--accent);
@@ -501,4 +509,97 @@ footer i:hover {
       animation-duration: 3s;
       animation-iteration-count: 3;
       z-index: 8888;
+    }
+
+    /* Media Queries */
+
+   
+    @media screen and (max-width: 1024px) {
+        header a h1 {
+            font-size: 2rem;
+        }
+        #biografia {
+            height: fit-content;
+            background-position-y: -20%;
+            padding: 10% 0;
+        }
+        .resp-menu {
+            display: block;
+        }
+        .nav-ul {
+            display: none;
+            margin-top: 8vh;
+            position: absolute;
+            right: 0;
+            top: 0;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: var(--details);
+            width: 100vw;
+            height: 92vh;
+            box-sizing: border-box;
+            padding: 0 0;
+            z-index: 10;
+        }
+        .nav-ul.show {
+            display: flex;
+        }
+    }
+    @media screen and (max-width: 800px) {
+        
+        #biografia {
+            background-position-y: -10%;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .main-container {
+            padding: 10vh 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            box-sizing: border-box;
+        }
+        #hero img {
+            display: none;
+        }
+        
+        #biografia .container-two {
+            flex-direction: column;
+        }
+        #formacao .main-container .container-two {
+            flex-direction: column;
+        }
+        #formacao #cursos {
+            position: relative;
+            left: 0;
+        }
+        #habilidades .main-container .container-two {
+            grid-template-columns: auto;
+        }
+        #contato .container-two, #contato .container-one {
+            align-self: flex-start;
+            }
+    }
+
+    @media screen and (max-width: 600px) {
+        #biografia {
+            background-position-y: -3%;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        #biografia {
+            background-position-y: -2%;
+        }
+        header a h1 {
+            font-size: 1.6rem;
+        }
+        #hero h2, #hero h2 span {
+            font-size: 2.5rem;
+        }
+        .heading {
+            font-size: 2rem;
+        }
     }

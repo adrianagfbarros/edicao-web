@@ -1,7 +1,7 @@
 /* 
 Autor: Adriana Barros
 Data: 16/07/2021
-Versão: 1.0
+Versão: 1.2
 Comentário: Website criado para a UFCD Edição Web.
 */
 
@@ -29,6 +29,7 @@ Comentário: Website criado para a UFCD Edição Web.
 }
 
 body {
+    max-width: 1440px;
     margin: 0 auto;
     background-color: var(--title-primary);
 }
@@ -65,11 +66,6 @@ header a {
     align-self: center;
 }
 
-header nav {
-    margin-right: 10%;
-    align-self: center;
-}
-
 header a h1 {
     font-family: var(--titulos);
     font-size: 1.5rem;
@@ -89,6 +85,8 @@ header a h1 {
 #hero-image {
     height: 95vh;
 }
+
+
 
 #hero-image img {
     width: 45%;
@@ -115,8 +113,7 @@ header a h1 {
 }
 
 #hero-image div p {
-    margin-top: -50px;
-    margin-bottom: 15%;
+    
     padding-left: 10.5%;
     font-family: var(--subtitulos);
     font-size: 1rem;
@@ -178,4 +175,45 @@ header a h1 {
 #btn-home:hover {
     background-image: radial-gradient( circle 485px at 51.5% -6.3%,  rgba(109,46,213,1) 0%, rgba(77,185,229,1) 95.7% );
     box-shadow: 0 0 30px 5px rgba(77, 185, 229, 1);
+}
+
+/* Media Queries*/
+@media screen and (max-width: 1024px) {
+    #hero-image {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    #hero-image div {
+        display: flex;
+        flex-direction: column;
+        right: -5%;
+        top: 30vh;
+    }
+    #hero-image img {
+        box-sizing: border-box;
+        position:relative;
+        top: 50vh;
+        width: 65%;
+        padding: 10% 0;
+    }
+    #btn-home {
+        display: block;
+    }
+}
+@media screen and (max-width: 700px) {
+    main {
+        padding-right: 10%;
+    }
+    #hero-image div {
+        width: 81%;
+    }
+    #hero-image div h2 {
+        font-size: 2.5rem;
+    }
+    #hero-image div p {
+        margin-top: -30px;
+        margin-bottom: 50px;
+    }
 }
